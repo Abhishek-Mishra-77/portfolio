@@ -7,22 +7,27 @@ const NavBar = () => {
 
   const menuLinks = [
     {
+      id: 'c1',
       name: 'HOME',
       link: '#home'
     },
     {
+      id: 'c2',
       name: 'ABOUT',
       link: '#about'
     },
     {
+      id: 'c3',
       name: 'SKILLS',
       link: '#skills'
     },
     {
+      id: 'c4',
       name: 'PROJECTS',
       link: '#projects'
     },
     {
+      id: 'c5',
       name: 'CONTACT',
       link: '#contact'
     },
@@ -71,8 +76,8 @@ const NavBar = () => {
           <ul className='flex flex-col justify-center h-full gap-10 py-2
           text-lg'>
             {
-              menuLinks?.map((menu, i) => (
-                <li onClick={() => setOpen(false)} key={i} className='px-6 hover:text-cyan-600'>
+              menuLinks?.map((menu) => (
+                <li onClick={() => setOpen(false)} key={menu.id} className='px-6 hover:text-cyan-600'>
                   <a href={menu?.link}>{menu?.name}</a>
                 </li>
               ))

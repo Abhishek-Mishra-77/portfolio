@@ -10,12 +10,14 @@ const Project = () => {
 
   const projects = [
     {
+      id: 'a1',
       img: Project1,
       name: 'Resturant-App',
       githup_link: 'https://github.com/Abhishek-Mishra-77/Resturant-meal-App',
       live_link: 'https://abhishek-mishra-77.github.io/Resturant-meal-App/'
     },
     {
+      id: 'a2',
       img: Project2,
       name: 'Zomato (Clone)',
       githup_link: 'https://github.com/Abhishek-Mishra-77/Zomato-app',
@@ -45,12 +47,10 @@ const Project = () => {
             autoplay={{
               delay: 3000,
             }}
-            Pagination={{
-              clickable: true,
-            }}>
+          >
 
-            {projects.map((project_Info, i) => (
-              <SwiperSlide key={i}>
+            {projects.map((project_Info) => (
+              <SwiperSlide key={project_Info.id}>
                 <div className='h-fil w-full p-4 bg-slate-700 rounded-xl display-flex pro'>
                   <img src={project_Info.img} alt={project_Info.name} className='rounded-lg' />
                   <h3 className='text-xl my-4'>{project_Info.name}</h3>

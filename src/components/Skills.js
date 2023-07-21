@@ -1,34 +1,43 @@
 import React from 'react'
 
+
+
+
 const Skill = () => {
 
   const skills = [
     {
+      id: 'e1',
       logo: 'logo-html5',
       level: 'HTML',
       count: '86'
     },
     {
+      id: 'e2',
       logo: 'logo-css3',
       level: 'CSS',
       count: '90'
     },
     {
+      id: 'e3',
       logo: 'logo-nodejs',
       level: 'Javascript',
       count: '75'
     },
     {
+      id: 'e4',
       logo: 'logo-react',
       level: 'React',
       count: '77'
     },
     {
+      id: 'e5',
       logo: 'logo-electron',
       level: 'Redux',
       count: '55'
     },
     {
+      id: 'e6',
       logo: 'logo-firebase',
       level: 'Firebase',
       count: '75'
@@ -41,8 +50,8 @@ const Skill = () => {
         <h3 className='text-4xl font-semibold'>My <span className='text-cyan-600'>Skills</span></h3>
         <p className='text-gray-400 mt-3 text-lg'>My Knowledge</p>
         <div className='flex items-center justify-center mt-12 gap-10 flex-wrap '>
-          {skills?.map((skill, i) => (
-            <div key={i} className='border-2 group border-cyan-600 relative min-w-[10rem] max-w-[16rem] 
+          {skills?.map((skill) => (
+            <div key={skill.id} className='border-2 group border-cyan-600 relative min-w-[10rem] max-w-[16rem] 
            bg-gray-900 p-10 rounded-xl box'>
               <div style={{
                 background: `conic-gradient(rgb(8,145,170) 100%,#ddd 100%)`

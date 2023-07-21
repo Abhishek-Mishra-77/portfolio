@@ -5,10 +5,26 @@ import './Profile.css';
 const Profile = () => {
 
   const social_media = [
-    { Symbol: 'logo-linkedin' , link:'https://www.linkedin.com/in/abhishek-mishra-342494237/' },
-    { Symbol: "logo-github" , link : 'https://github.com/Abhishek-Mishra-77' },
-    { Symbol: 'logo-whatsapp' ,link : '' },
-    { Symbol: 'logo-instagram' ,link : '' }
+    {
+      id: 'd1',
+      Symbol: 'logo-linkedin',
+      link: 'https://www.linkedin.com/in/abhishek-mishra-342494237/'
+    },
+    {
+      id: 'd2',
+      Symbol: "logo-github",
+      link: 'https://github.com/Abhishek-Mishra-77'
+    },
+    {
+      id: 'd3',
+      Symbol: 'logo-whatsapp',
+      link: ''
+    },
+    {
+      id: 'd4',
+      Symbol: 'logo-instagram',
+      link: ''
+    }
   ]
 
 
@@ -39,9 +55,9 @@ const Profile = () => {
           <div className='mt-8 text-3xl flex  items-center md:justify-start
         justify-center gap-5'>
             {social_media?.map(icon => (
-              <div key={icon} className='text-gray-500 hover:text-white 
+              <div key={icon.id} className='text-gray-500 hover:text-white 
             cursor-pointer hover:text-white '>
-               <a target='_blank' href={icon.link}> <ion-icon name={icon.Symbol} ></ion-icon></a>
+                <a target='_blank' href={icon.link}> <ion-icon name={icon.Symbol} ></ion-icon></a>
               </div>
             ))}
           </div>

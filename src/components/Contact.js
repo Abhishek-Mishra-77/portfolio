@@ -1,14 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+
+
+
 const Contact = () => {
 
-
-
-
-  // Form Sending Email
   const form = useRef();
-
-
 
   const sendEmail = (event) => {
     event.preventDefault();
@@ -25,29 +22,46 @@ const Contact = () => {
   }
 
 
-
-
-
   const contact_info = [
     {
+      id: 'a3',
       logo: 'mail-outline',
       text: 'abhishekmishra992016@gmail.com'
     },
     {
+      id: 'a4',
       logo: 'call',
       text: '+91 8577887978'
     },
     {
+      id: 'a5',
       logo: 'location',
       text: 'Bhadohi , Uttar Pradesh'
     },
   ]
 
   const social_media = [
-    { Symbol: 'logo-linkedin', link: 'https://www.linkedin.com/in/abhishek-mishra-342494237/' },
-    { Symbol: "logo-github", link: 'https://github.com/Abhishek-Mishra-77' },
-    { Symbol: 'logo-whatsapp', link: '' },
-    { Symbol: 'logo-instagram', link: '' }
+    {
+      id:'a6',
+      Symbol: 'logo-linkedin',
+      link: 'https://www.linkedin.com/in/abhishek-mishra-342494237/',
+
+    },
+    {
+      id:'a7',
+      Symbol: "logo-github",
+      link: 'https://github.com/Abhishek-Mishra-77'
+    },
+    {
+      id:'a8',
+      Symbol: 'logo-whatsapp',
+      link: ''
+    },
+    {
+      id:'a9',
+      Symbol: 'logo-instagram',
+      link: ''
+    }
   ]
 
 
@@ -90,9 +104,9 @@ const Contact = () => {
               Contact <span className="text-cyan-600">Me</span>
             </h3>
             <p className="text-gray-400  text-lg">Fill up the form below to contact</p>
-            {contact_info.map((contact, i) => (
+            {contact_info.map((contact) => (
               <div
-                key={i}
+                key={contact.id}
                 className="flex flex-row  
                 text-left gap-4 flex-wrap items-center"
               >
@@ -108,7 +122,7 @@ const Contact = () => {
             <div className='mt-2 ml-5 text-4xl flex  items-center md:justify-start
                   justify-center gap-7'>
               {social_media?.map(icon => (
-                <div key={icon} className='text-gray-500 hover:text-white 
+                <div key={icon.id} className='text-gray-500 hover:text-white 
                     cursor-pointer hover:text-white box2'>
                   <a target='_blank' href={icon.link}> <ion-icon name={icon.Symbol} ></ion-icon></a>
                 </div>
